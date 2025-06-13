@@ -1,6 +1,6 @@
 <?php
 
-namespace Nekro\Repository\User\Contract;
+namespace Nekro\Repositories\User\Contract;
 
 use Nekro\Models\User\UserModel;
 

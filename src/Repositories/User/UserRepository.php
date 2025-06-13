@@ -1,10 +1,10 @@
 <?php
 
-namespace Nekro\Repository\User;
+namespace Nekro\Repositories\User;
 
 use Nekro\Infrastructure\Persistence\Mysql\DatabaseInstance;
 use Nekro\Models\User\UserModel;
-use Nekro\Repository\User\Contract\Contract;
+use Nekro\Repositories\User\Contract\Contract;
 use PDO;
 
 class UserRepository implements Contract
