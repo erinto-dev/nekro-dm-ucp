@@ -12,7 +12,7 @@ class UserController extends Controller
   {
     try {
       $user = $action->execute($id);
-     return parent::success("Player encontrado", 200, $user); 
+      return parent::success("Conta encontrada", 200, $user);
     } catch(Exception $e) {
       return parent::error($e->getMessage(), $e->getCode());
     }
