@@ -1,0 +1,19 @@
+{
+    "name": "erin/nekro",
+    "description": "site para o projeto nekro dm",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nekro\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "erin",
+            "email": "botheritons2005@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
