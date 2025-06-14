@@ -18,9 +18,17 @@ $userController = new UserController();
 
 
 $router->add("GET", "/inicio", function() use($render, $userController, $userRepository) {
+
   $user = $userController->getById(new GetUserById($userRepository), 1);
   echo $render->render("home", ["user" => $user]);
+
+});
+$router->add("GET", "/rankings", function() use($render) {
+  echo $render->render("rankings");
 });
 
+$router->add("GET", "/ranking-level", function() use($render) {
+  echo $render->render("ranking_level");
+});
 
 $router->run();
