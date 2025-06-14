@@ -23,4 +23,15 @@ class UserRepository implements Contract
 
     return new UserModel($result);
   }
+
+  public function getTopLevel(): array
+  {
+    $sql = $this->pdo->prepare("SELECT username, skin, level FROM players ORDER BY level DESC LIMIT 15"); 
+    $sql->execute();
+
+    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+    return $result;
+  }
+
 }

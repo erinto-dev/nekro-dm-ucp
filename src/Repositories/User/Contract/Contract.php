@@ -7,4 +7,5 @@ use Nekro\Models\User\UserModel;
 interface Contract
 {
   public function getUserById(int $id): ?UserModel;
+  public function getTopLevel(): array;
 }
