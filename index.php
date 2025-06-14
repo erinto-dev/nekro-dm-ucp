@@ -17,8 +17,6 @@ $userRepository = new UserRepository($connection);
 
 $userController = new UserController();
 
-$top = $userController->getTopLevel(new GetTopLevel($userRepository));
-var_dump($top);exit;
 $router->add("GET", "/inicio", function() use($render, $userController, $userRepository) {
 
   $user = $userController->getById(new GetUserById($userRepository), 1);
@@ -29,9 +27,9 @@ $router->add("GET", "/rankings", function() use($render) {
   echo $render->render("rankings");
 });
 
-$router->add("GET", "/ranking-level", function() use($render) {
-  
-  echo $render->render("ranking_level");
+$router->add("GET", "/ranking-level", function() use($render, $userController, $userRepository) {
+  $top = $userController->getTopLevel(new GetTopLevel($userRepository));
+  echo $render->render("ranking_level", ["results" => $top["details"]]);
 });
 
 $router->run();

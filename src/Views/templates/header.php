@@ -16,7 +16,7 @@ $headerOptionsTwo = array(
   <link href="public/css/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-violet-200">
+<body class="bg-slate-900">
   <header class="w-full h-24 bg-slate-800 flex justify-between fixed top-0 left-0">
       <nav class="container flex justify-between items-center text-white">
       <div class="w-32">
